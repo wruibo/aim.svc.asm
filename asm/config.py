@@ -65,8 +65,8 @@ DATABASES = {
     'arm': {
         'dev': {
             'host': '127.0.0.1',
-            'user': 'root',
-            'password': 'root',
+            'user': 'armsvc',
+            'password': 'armsvc2019',
             'database': 'arm',
             'port': 3306,
             'charset': 'utf8'
@@ -74,8 +74,8 @@ DATABASES = {
 
         'test': {
             'host': '127.0.0.1',
-            'user': 'root',
-            'password': 'root',
+            'user': 'armsvc',
+            'password': 'armsvc2019',
             'database': 'arm',
             'port': 3306,
             'charset': 'utf8'
@@ -83,8 +83,8 @@ DATABASES = {
 
         'online': {
             'host': '127.0.0.1',
-            'user': 'root',
-            'password': 'root',
+            'user': 'armsvc',
+            'password': 'armsvc2019',
             'database': 'arm',
             'port': 3306,
             'charset': 'utf8'
