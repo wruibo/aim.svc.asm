@@ -203,4 +203,4 @@ class DfcfExpressSpider(spider.Spider):
 
 
 # register spider to manager
-manager.register(DfcfExpressSpider('dfcf.express', '东方财富快讯', timer.Interval(10)))
+manager.register(DfcfExpressSpider('dfcf.express', '东方财富快讯', timer.Interval(30)))

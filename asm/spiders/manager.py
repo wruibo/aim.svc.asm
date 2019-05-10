@@ -26,7 +26,7 @@ class _SpiderManager(threading.Thread):
         """
         self._spiders[spider.id] = spider
 
-    def enable(self, spider):
+    def enable(self, spider=None):
         """
             enable a spider
         :param spider: str, spider id
@@ -39,7 +39,7 @@ class _SpiderManager(threading.Thread):
             if self._spiders.get(spider) is not None:
                 self._spiders[spider].enable()
 
-    def disable(self, spider):
+    def disable(self, spider=None):
         """
             disable a spider
         :param spider: str, spider id
@@ -52,7 +52,7 @@ class _SpiderManager(threading.Thread):
             if self._spiders.get(spider) is not None:
                 self._spiders[spider].disable()
 
-    def status(self, spider):
+    def status(self, spider=None):
         """
             get spider status
         :param spider: str, spider id
@@ -102,16 +102,17 @@ def register(spider):
 
 
 def start():
+    _default_spider_manager.enable()
     _default_spider_manager.start()
 
 
-def enable(spider = None):
+def enable(spider=None):
     _default_spider_manager.enable(spider)
 
 
-def disable(spider = None):
+def disable(spider=None):
     _default_spider_manager.disable(spider)
 
 
-def status(spider = None):
+def status(spider=None):
     return _default_spider_manager.status(spider)

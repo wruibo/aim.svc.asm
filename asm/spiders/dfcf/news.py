@@ -204,6 +204,4 @@ class DfcfNewsSpider(spider.Spider):
 
 
 # register spider to manager
-manager.register(DfcfNewsSpider('dfcf.news', '东方财富新闻', timer.Interval(5)))
-
-
+manager.register(DfcfNewsSpider('dfcf.news', '东方财富新闻', timer.Interval(60)))

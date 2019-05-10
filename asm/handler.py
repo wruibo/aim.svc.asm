@@ -4,6 +4,7 @@
 import tornado.web
 from . import config
 
+
 class Handler(tornado.web.RequestHandler):
     """
         base handler for request handlers

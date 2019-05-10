@@ -3,7 +3,7 @@
 """
 import tornado.ioloop, tornado.web, tornado.options, tornado.log, logging
 
-from asm import config, urls, models
+from asm import config, urls, models, spiders
 
 # application settings
 settings = {
@@ -33,6 +33,9 @@ def start():
 
     # setup service
     setup(tornado.options.options.mode)
+
+    # start spider service
+    spiders.manager.start()
 
     # service port
     port = tornado.options.options.port

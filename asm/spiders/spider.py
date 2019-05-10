@@ -76,7 +76,7 @@ class Spider:
             'id': self._id,
             'name': self._name,
             'cron': str(self._cron),
-            'disabled': self._disabled,
+            'enable': not self._disabled,
             'running': self._is_running,
             'count': self._counter,
             'lstime': self._last_start_time,
